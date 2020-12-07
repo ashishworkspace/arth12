@@ -1,0 +1,14 @@
+- hosts: haproxy
+  tasks:
+   - name: "Installing HAPROXY Software"
+     package:
+      name: "haproxy"
+      state: present
+   - name: "Copying the HAPROXY Config file"
+     template:
+      src: haproxy.cfg
+      dest: /etc/haproxy/haproxy.cfg
+   - name: "Starting the Proxy"
+     service: 
+      name: haproxy
+      state: restarted

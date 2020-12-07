@@ -1,0 +1,19 @@
+- hosts: webserver
+  tasks:
+   - name: "Installing HTTPD WEBSERVER Software"
+     package: 
+      name: "httpd"
+      state: present
+   - name: "Install PHP Software"
+     package:
+      name: "php"
+      state: present
+   - name: "Deploying one Website"
+     copy:
+      src: index.php
+      dest: /var/www/html/index.php 
+   - name:
+     service:
+      name: "httpd"
+      state: restarted
+

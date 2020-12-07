@@ -1,0 +1,9 @@
+Step1: yum update -y
+
+Step2: wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+Step3: yum install epel-release-latest-7.noarch.rpm
+
+Step4: yum update -y
+
+Step5: yum install git python python-devel python-pip openssl ansible -y
